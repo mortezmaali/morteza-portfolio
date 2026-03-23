@@ -135,10 +135,12 @@ h2 {
 }
 
 .btn:hover { transform: translateY(-2px); }
+
 .btn-primary {
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   color: #0a1020;
 }
+
 .btn-secondary {
   border: 1px solid var(--line);
   background: rgba(255,255,255,0.03);
@@ -148,7 +150,8 @@ h2 {
 .card,
 .info-panel,
 .pub-box,
-.contact-card {
+.contact-card,
+.testimonial-card {
   background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.02));
   border: 1px solid var(--line);
   border-radius: 24px;
@@ -157,6 +160,23 @@ h2 {
 
 .hero-card {
   padding: 1.75rem;
+}
+
+.hero-profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero-profile-image {
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 20px;
+  margin: 0 auto 0.5rem auto;
+  display: block;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
 }
 
 .avatar {
@@ -203,7 +223,11 @@ h2 {
 }
 
 .info-item:last-child { border-bottom: none; }
-.info-title { font-weight: 700; color: var(--text); }
+
+.info-title {
+  font-weight: 700;
+  color: var(--text);
+}
 
 .cards-grid {
   display: grid;
@@ -255,6 +279,40 @@ h2 {
   padding: 1.5rem;
 }
 
+.section-intro {
+  max-width: 760px;
+  margin-bottom: 1.25rem;
+}
+
+.testimonial-actions {
+  margin-bottom: 2rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.testimonial-card {
+  padding: 1.25rem;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+}
+
+.testimonial-text {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.testimonial-author {
+  font-weight: 600;
+  opacity: 0.9;
+  color: var(--text);
+}
+
 .contact-email {
   display: inline-block;
   margin-top: 1rem;
@@ -286,6 +344,10 @@ h2 {
   }
 
   .timeline-item { gap: 0.7rem; }
+
+  .hero-profile-image {
+    max-width: 320px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -293,4 +355,8 @@ h2 {
   .hero { padding-top: 4.2rem; }
   .section { padding: 3.6rem 0; }
   .contact-email { font-size: 1.1rem; }
+
+  .hero-profile-image {
+    max-width: 100%;
+  }
 }
