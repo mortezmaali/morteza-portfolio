@@ -4,11 +4,491 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Morteza Maali Amiri | Color & Imaging Scientist</title>
-  <meta name="description" content="Portfolio website for Morteza Maali Amiri, Ph.D. - color and imaging scientist specializing in camera ISP, color science, HDR imaging, image quality evaluation, hyperspectral and multispectral imaging, computer vision, and custom imaging tool development." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <meta
+    name="description"
+    content="Morteza Maali Amiri, Ph.D. — consulting in camera ISP, color and imaging science, HDR imaging, image quality evaluation, hyperspectral and multispectral imaging, AR/VR/MR imaging, and custom imaging tool development."
+  />
+  <style>
+    :root {
+      --bg: #0b1220;
+      --bg-soft: #111a2b;
+      --card: rgba(255,255,255,0.04);
+      --card-strong: rgba(255,255,255,0.06);
+      --text: #eef4ff;
+      --muted: #b5c3dc;
+      --accent: #6ba8ff;
+      --accent-2: #89e2c8;
+      --border: rgba(255,255,255,0.10);
+      --shadow: 0 14px 34px rgba(0,0,0,0.28);
+      --maxw: 1150px;
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #09111d 0%, #0b1220 100%);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(92%, var(--maxw));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 18, 32, 0.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 0;
+    }
+
+    .brand {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 0.2px;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.95rem;
+    }
+
+    .nav a {
+      color: var(--muted);
+    }
+
+    .nav a:hover {
+      color: white;
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 76px 0 44px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin: 0 0 14px;
+      padding: 7px 13px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.03);
+      color: var(--accent-2);
+      font-size: 0.92rem;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(2rem, 4.3vw, 3.35rem);
+      line-height: 1.08;
+    }
+
+    .hero-text {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 1.03rem;
+      max-width: 760px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.2s ease;
+      border: 1px solid var(--border);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #4f84ff);
+      color: white;
+      border: none;
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.04);
+      color: white;
+    }
+
+    .quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .quick-links span {
+      opacity: 0.5;
+    }
+
+    .hero-profile-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-profile-image {
+      width: 100%;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      margin-bottom: 16px;
+      object-fit: cover;
+    }
+
+    .hero-profile-card h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+    }
+
+    .hero-profile-card ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .section {
+      padding: 30px 0;
+    }
+
+    .section-label {
+      margin: 0 0 8px;
+      color: var(--accent-2);
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      font-size: 0.88rem;
+    }
+
+    .section h2 {
+      margin: 0 0 18px;
+      font-size: 1.95rem;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 780px;
+      margin-top: -6px;
+      margin-bottom: 22px;
+    }
+
+    .card,
+    .info-panel,
+    .contact-card,
+    .pub-box,
+    .testimonial-card,
+    .timeline-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .two-col > div:first-child,
+    .info-panel,
+    .contact-card,
+    .pub-box {
+      padding: 24px;
+    }
+
+    .two-col p {
+      color: var(--muted);
+      margin-top: 0;
+    }
+
+    .info-panel {
+      display: grid;
+      gap: 14px;
+    }
+
+    .info-item {
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .info-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .info-title {
+      display: block;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 4px;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .cards-grid .card {
+      padding: 22px;
+    }
+
+    .cards-grid h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.08rem;
+    }
+
+    .cards-grid p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 165px 1fr;
+      gap: 20px;
+      padding: 22px;
+    }
+
+    .timeline-year {
+      color: var(--accent-2);
+      font-weight: 700;
+      font-size: 0.98rem;
+      white-space: nowrap;
+    }
+
+    .timeline-content h3 {
+      margin: 0 0 6px;
+      font-size: 1.1rem;
+    }
+
+    .timeline-org {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .timeline-content p:last-child {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .pub-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 18px;
+    }
+
+    .pub-list,
+    .theme-list,
+    .contact-card ul,
+    .testimonial-card p,
+    .hero-profile-card ul {
+      color: var(--muted);
+    }
+
+    .pub-list,
+    .theme-list,
+    .contact-card ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .pub-list li,
+    .theme-list li,
+    .contact-card li,
+    .hero-profile-card li {
+      margin-bottom: 10px;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .testimonial-card {
+      padding: 22px;
+    }
+
+    .testimonial-text {
+      margin-top: 0;
+      margin-bottom: 14px;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      margin: 0;
+      color: white;
+      font-weight: 700;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .contact-grid > div:first-child {
+      padding: 0;
+    }
+
+    .contact-grid p {
+      color: var(--muted);
+    }
+
+    .contact-email {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 1.08rem;
+      font-weight: 700;
+    }
+
+    .contact-card {
+      padding: 24px;
+    }
+
+    .contact-card h3,
+    .pub-box h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--border);
+      margin-top: 38px;
+      padding: 26px 0 40px;
+    }
+
+    .footer-wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .two-col,
+      .pub-layout,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cards-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav-wrap {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cards-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .quick-links {
+        align-items: flex-start;
+      }
+
+      .footer-wrap {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -29,21 +509,23 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <p class="eyebrow">Camera ISP • Color/imaging Science • HDR Imaging • Hyperspectral & Multispectral Imaging</p>
-          <h1>Consulting in camera ISP, color/imaging science, hyperspectral / multispectral imaging and ML/AI imaging applications </h1>
+          <p class="eyebrow">Camera ISP • Color & Imaging Science • HDR • Hyperspectral / Multispectral Imaging</p>
+          <h1>Consulting in camera ISP, color and imaging science, hyperspectral / multispectral imaging, and imaging tool development</h1>
           <p class="hero-text">
             I am Morteza Maali Amiri, Ph.D., a color and imaging scientist with experience across both industry and academia.
-            My work spans camera ISP, color reproduction, HDR imaging, image and video quality evaluation, skin tone
-            reproduction, hyperspectral and multispectral imaging, computer vision, psychophysical studies, and custom
-            imaging tool development. I help research and product teams solve challenging problems in imaging systems,
-            evaluation workflows, and applied analysis.
+            My work spans camera ISP, color reproduction, HDR imaging, image and video quality evaluation, skin tone reproduction,
+            hyperspectral and multispectral imaging, computer vision, psychophysical studies, AR/VR/MR imaging, and custom imaging tools.
           </p>
+
           <div class="hero-actions">
             <a class="btn btn-primary" href="mailto:mm2391@rit.edu">Email for consulting inquiries</a>
             <a class="btn btn-secondary" href="#contact">View consulting areas</a>
           </div>
+
           <div class="quick-links">
             <a href="mailto:mm2391@rit.edu">mm2391@rit.edu</a>
+            <span>•</span>
+            <a href="tel:+15859784887">+1 585 978 4887</a>
             <span>•</span>
             <a href="https://github.com/mortezmaali" target="_blank" rel="noreferrer">GitHub</a>
             <span>•</span>
@@ -55,9 +537,9 @@
           </div>
         </div>
 
-        <div class="hero-card hero-profile-card">
+        <div class="hero-profile-card">
           <img
-            src="images/morteza-profile.jpeg"
+            src="morteza-profile.jpeg"
             alt="Morteza Maali Amiri"
             class="hero-profile-image"
           />
@@ -74,36 +556,36 @@
 
     <section class="section" id="about">
       <div class="container two-col">
-        <div>
+        <div class="card">
           <p class="section-label">About</p>
           <h2>Small bio</h2>
           <p>
             Morteza Maali Amiri is a color and imaging scientist with advanced training in Imaging Science
             and Color Science from Rochester Institute of Technology. His work has addressed problems in
             color reproduction, camera and imaging workflows, HDR imaging, spectral and colorimetric recovery,
-            image registration, hyperspectral and multispectral imaging, and computer vision for specialized
-            imaging applications.
+            image registration, hyperspectral and multispectral imaging, and computer vision for specialized imaging applications.
           </p>
           <p>
-            He currently works as a Color/Imaging Scientist through DigitalFish on contract with Meta,
-            contributing to projects involving color perception and reproduction, camera and display-related
-            evaluation, image and video quality, AR/VR/MR perception, skin tone reproduction, psychophysical
-            experiments, and automated capture workflows.
+            He currently works as a Color / Imaging Scientist through DigitalFish on contract with Meta,
+            contributing to projects involving color perception and reproduction, camera and display-related evaluation,
+            image and video quality, AR/VR/MR perception, skin tone reproduction, psychophysical experiments,
+            and automated capture workflows.
           </p>
-          <p>
+          <p style="margin-bottom:0;">
             In addition to his scientific and engineering work, he also provides consulting for companies,
             researchers, and specialized teams that need support with camera ISP, imaging analysis,
             perceptual evaluation, spectral imaging, and custom technical development in Python and MATLAB.
           </p>
         </div>
+
         <div class="info-panel">
           <div class="info-item">
             <span class="info-title">Current role</span>
-            <span>Color/Imaging Scientist</span>
+            <span>Color / Imaging Scientist</span>
           </div>
           <div class="info-item">
             <span class="info-title">Background</span>
-            <span>Ph.D. Imaging Science, M.Sc. Color Science</span>
+            <span>Ph.D. in Imaging Science, M.Sc. in Color Science</span>
           </div>
           <div class="info-item">
             <span class="info-title">Main tools</span>
@@ -117,7 +599,7 @@
       </div>
     </section>
 
-    <section class="section alt" id="expertise">
+    <section class="section" id="expertise">
       <div class="container">
         <p class="section-label">Expertise</p>
         <h2>Core areas</h2>
@@ -126,22 +608,27 @@
             <h3>Camera ISP & Imaging Pipelines</h3>
             <p>Consulting and technical support for camera ISP, imaging pipeline evaluation, workflow design, and practical imaging system analysis.</p>
           </article>
+
           <article class="card">
             <h3>Color Science</h3>
             <p>Color reproduction, color appearance, camera and display characterization, perceptual analysis, and human color vision.</p>
           </article>
+
           <article class="card">
             <h3>HDR & Image Quality</h3>
             <p>HDR imaging, image and video quality evaluation, perceptual assessment, and vision-focused workflow analysis.</p>
           </article>
+
           <article class="card">
             <h3>Skin Tone, Perception & AR/VR/MR</h3>
             <p>Skin tone reproduction, psychophysical experiments, perceptual evaluation, and imaging studies related to human appearance, display experience, and AR/VR/MR systems.</p>
           </article>
+
           <article class="card">
             <h3>Hyperspectral & Multispectral Imaging</h3>
             <p>Hyperspectral and multispectral imaging, spectral reflectance recovery, colorimetric characterization, and scientific imaging workflows.</p>
           </article>
+
           <article class="card">
             <h3>Custom Imaging Tools</h3>
             <p>Python and MATLAB development for imaging analysis, automation, visualization, multi-device capture workflows, and prototype research tools.</p>
@@ -156,9 +643,9 @@
         <h2>Selected professional appointments</h2>
         <div class="timeline">
           <article class="timeline-item">
-            <div class="timeline-year">2024 - Present</div>
+            <div class="timeline-year">2024 – Present</div>
             <div class="timeline-content">
-              <h3>Color/Imaging Scientist</h3>
+              <h3>Color / Imaging Scientist</h3>
               <p class="timeline-org">DigitalFish, on contract with Meta</p>
               <p>
                 Working on color perception and reproduction across Meta products, HDR imaging, image and video quality analysis,
@@ -167,8 +654,9 @@
               </p>
             </div>
           </article>
+
           <article class="timeline-item">
-            <div class="timeline-year">2023 - 2024</div>
+            <div class="timeline-year">2023 – 2024</div>
             <div class="timeline-content">
               <h3>Postdoctoral Researcher in Imaging Science</h3>
               <p class="timeline-org">Rochester Institute of Technology</p>
@@ -178,25 +666,27 @@
               </p>
             </div>
           </article>
+
           <article class="timeline-item">
             <div class="timeline-year">2021</div>
             <div class="timeline-content">
               <h3>Software Intern</h3>
               <p class="timeline-org">NVIDIA</p>
               <p>
-                Worked on autonomous-car camera topics including image quality analysis, image processing, machine learning,
-                deep learning, and color reproduction.
+                Worked on autonomous-vehicle camera topics including image quality analysis, image processing,
+                machine learning, deep learning, and color reproduction.
               </p>
             </div>
           </article>
+
           <article class="timeline-item">
             <div class="timeline-year">2019</div>
             <div class="timeline-content">
               <h3>Software Intern</h3>
               <p class="timeline-org">NVIDIA</p>
               <p>
-                Worked on image quality analysis, noise quantification, image processing, machine learning, and color reproduction
-                for automotive camera projects.
+                Worked on image quality analysis, noise quantification, image processing, machine learning,
+                and color reproduction for automotive camera projects.
               </p>
             </div>
           </article>
@@ -204,7 +694,7 @@
       </div>
     </section>
 
-    <section class="section alt" id="publications">
+    <section class="section" id="publications">
       <div class="container">
         <p class="section-label">Research</p>
         <h2>Selected publications and themes</h2>
@@ -213,15 +703,15 @@
             <h3>Selected publications</h3>
             <ul class="pub-list">
               <li>The Development of a Skin Chart Based on Real Measured Data (2026)</li>
-              <li>A new method for XRF and RGB image registration (2025)</li>
-              <li>Balancing hyperspectral dimensionality reduction and information preservation for lithological classification (2025)</li>
-              <li>Colorimetric characterization of multispectral imaging systems for visualization of historical artifacts (2024)</li>
-              <li>Virtual cleaning of works of art using a deep generative network: spectral reflectance estimation (2023)</li>
-              <li>Virtual cleaning of works of art using deep convolutional neural networks (2021)</li>
-              <li>A strategy toward spectral and colorimetric color reproduction using ordinary digital cameras (2018)</li>
-              <li>A hybrid of weighted regression and linear models for extraction of reflectance spectra from CIEXYZ tristimulus values (2014)</li>
+              <li>A New Method for XRF and RGB Image Registration (2025)</li>
+              <li>Colorimetric Characterization of Multispectral Imaging Systems for Visualization of Historical Artifacts (2024)</li>
+              <li>Virtual Cleaning of Works of Art Using a Deep Generative Network: Spectral Reflectance Estimation (2023)</li>
+              <li>Virtual Cleaning of Works of Art Using Deep Convolutional Neural Networks (2021)</li>
+              <li>Spectral Reflectance Reconstruction Using Fuzzy Logic System Training: Color Science Application (2020)</li>
+              <li>A Strategy Toward Spectral and Colorimetric Color Reproduction Using Ordinary Digital Cameras (2018)</li>
             </ul>
           </div>
+
           <div class="pub-box">
             <h3>Research themes</h3>
             <ul class="theme-list">
@@ -236,7 +726,7 @@
       </div>
     </section>
 
-    <section class="section alt" id="testimonials">
+    <section class="section" id="testimonials">
       <div class="container">
         <p class="section-label">Testimonials</p>
         <h2>Selected feedback and recommendations</h2>
@@ -245,7 +735,7 @@
           before being added here.
         </p>
 
-        <div class="hero-actions testimonial-actions">
+        <div class="hero-actions">
           <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdTqw0C3XQ4y-KZhKwPGSCiC0MF_xBdSjM4EA89y9qY4b9ZOQ/viewform?usp=publish-editor" target="_blank" rel="noreferrer">Leave a testimonial</a>
           <a class="btn btn-secondary" href="mailto:mm2391@rit.edu?subject=Testimonial%20for%20Morteza%20Maali%20Amiri">Send by email</a>
         </div>
@@ -253,7 +743,7 @@
         <div class="testimonials-grid">
           <article class="testimonial-card">
             <p class="testimonial-text">
-              “Morteza was able to help me with the hyperspectral imaging problem that I had! He is very good at what he is doing!!”
+              “Morteza was able to help me with the hyperspectral imaging problem that I had. He is very good at what he is doing.”
             </p>
             <p class="testimonial-author">— Mark Stephens</p>
           </article>
@@ -267,7 +757,7 @@
 
           <article class="testimonial-card">
             <p class="testimonial-text">
-              “Example....”
+              “Example testimonial can go here until you add a new one.”
             </p>
             <p class="testimonial-author">— Name, Collaborator</p>
           </article>
@@ -281,12 +771,14 @@
           <p class="section-label">Contact</p>
           <h2>Inquiries and consultations</h2>
           <p>
-            If your team is working on camera ISP, color science, image quality, HDR imaging, hyperspectral or multispectral imaging,
-            AR/VR/MR imaging, perceptual evaluation, or custom imaging tools, feel free to reach out. I am available
-            for consulting, technical review, project-based collaborations, and specialized development work.
+            If your team is working on camera ISP, color science, image quality, HDR imaging,
+            hyperspectral or multispectral imaging, AR/VR/MR imaging, perceptual evaluation,
+            or custom imaging tools, feel free to reach out. I am available for consulting,
+            technical review, project-based collaborations, and specialized development work.
           </p>
           <a class="contact-email" href="mailto:mm2391@rit.edu">mm2391@rit.edu</a>
         </div>
+
         <div class="contact-card">
           <h3>Typical consultation topics</h3>
           <ul>
@@ -305,12 +797,12 @@
   <footer class="site-footer">
     <div class="container footer-wrap">
       <p>© <span id="year"></span> Morteza Maali Amiri</p>
-      <p>Built as a simple static website package ready for GitHub Pages or Netlify.</p>
+      <p>Built as a simple static website for GitHub Pages.</p>
     </div>
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
