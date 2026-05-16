@@ -3,23 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Morteza Maali Amiri | Color & Imaging Scientist</title>
+
+  <title>Morteza Maali Amiri, Ph.D. | Color & Imaging Scientist</title>
+
   <meta
     name="description"
-    content="Morteza Maali Amiri, Ph.D. — consulting in camera ISP, color and imaging science, AI/ML for imaging, HDR imaging, image quality evaluation, and hyperspectral and multispectral imaging."
+    content="Morteza Maali Amiri, Ph.D. — Color and Imaging Scientist specializing in camera ISP, color science, imaging science, color reproduction, HDR imaging, image quality, hyperspectral and multispectral imaging, and AI/ML for imaging."
   />
+
   <style>
     :root {
       --bg: #0b1220;
-      --card: rgba(255,255,255,0.04);
+      --bg-soft: #111b2e;
+      --card: rgba(255, 255, 255, 0.045);
+      --card-strong: rgba(255, 255, 255, 0.075);
       --text: #eef4ff;
-      --muted: #b5c3dc;
+      --muted: #b8c5dc;
+      --muted-2: #8fa0bb;
       --accent: #6ba8ff;
       --accent-2: #89e2c8;
-      --border: rgba(255,255,255,0.10);
-      --shadow: 0 14px 34px rgba(0,0,0,0.28);
-      --maxw: 1150px;
+      --border: rgba(255, 255, 255, 0.11);
+      --shadow: 0 18px 44px rgba(0, 0, 0, 0.32);
       --radius: 22px;
+      --maxw: 1120px;
     }
 
     * {
@@ -33,7 +39,10 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(180deg, #09111d 0%, #0b1220 100%);
+      background:
+        radial-gradient(circle at top left, rgba(107, 168, 255, 0.16), transparent 32%),
+        radial-gradient(circle at top right, rgba(137, 226, 200, 0.12), transparent 34%),
+        linear-gradient(180deg, #07101d 0%, #0b1220 42%, #08101d 100%);
       color: var(--text);
       line-height: 1.65;
     }
@@ -61,8 +70,8 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(11, 18, 32, 0.88);
-      backdrop-filter: blur(10px);
+      background: rgba(11, 18, 32, 0.9);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
 
@@ -70,22 +79,22 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
-      padding: 16px 0;
+      gap: 22px;
+      padding: 15px 0;
     }
 
     .brand {
-      font-size: 1.1rem;
-      font-weight: 700;
       color: white;
+      font-size: 1rem;
+      font-weight: 800;
       letter-spacing: 0.2px;
     }
 
     .nav {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
-      font-size: 0.95rem;
+      gap: 15px;
+      font-size: 0.93rem;
     }
 
     .nav a {
@@ -98,54 +107,66 @@
     }
 
     .hero {
-      padding: 44px 0 8px;
+      padding: 56px 0 28px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: 1.35fr 0.65fr;
       gap: 34px;
       align-items: center;
     }
 
-    .hero-name {
-      margin: 0 0 6px;
-      font-size: 1.75rem;
-      font-weight: 800;
-      color: white;
-      letter-spacing: 0.2px;
-    }
-
-    .hero-role {
-      margin: 0 0 14px;
-      color: var(--muted);
-      font-size: 1.05rem;
-      font-weight: 500;
-    }
-
     .eyebrow {
       display: inline-block;
-      margin: 0 0 14px;
+      margin-bottom: 16px;
       padding: 7px 13px;
       border: 1px solid var(--border);
       border-radius: 999px;
-      background: rgba(255,255,255,0.03);
+      background: rgba(255, 255, 255, 0.035);
       color: var(--accent-2);
       font-size: 0.92rem;
+      font-weight: 700;
     }
 
-    h1 {
-      margin: 0 0 14px;
-      font-size: clamp(1.7rem, 3.1vw, 2.45rem);
-      line-height: 1.14;
-      max-width: 820px;
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 4.5vw, 3.55rem);
+      line-height: 1.08;
+      letter-spacing: -1.1px;
+      color: white;
+    }
+
+    .hero-title {
+      margin: 0 0 18px;
+      color: var(--accent);
+      font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+      font-weight: 800;
     }
 
     .hero-text {
       margin: 0 0 22px;
       color: var(--muted);
-      font-size: 1.02rem;
-      max-width: 760px;
+      font-size: 1.04rem;
+      max-width: 810px;
+    }
+
+    .callout {
+      margin: 22px 0 24px;
+      padding: 20px 22px;
+      border: 1px solid rgba(137, 226, 200, 0.25);
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(137, 226, 200, 0.10), rgba(107, 168, 255, 0.08));
+      box-shadow: var(--shadow);
+    }
+
+    .callout strong {
+      color: white;
+    }
+
+    .callout p {
+      margin: 0;
+      color: var(--muted);
     }
 
     .hero-actions {
@@ -159,9 +180,9 @@
       display: inline-block;
       padding: 12px 18px;
       border-radius: 999px;
-      font-weight: 700;
-      transition: 0.2s ease;
+      font-weight: 800;
       border: 1px solid var(--border);
+      transition: 0.2s ease;
     }
 
     .btn:hover {
@@ -170,14 +191,14 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--accent), #4f84ff);
       color: white;
+      background: linear-gradient(135deg, var(--accent), #4e82ff);
       border: none;
     }
 
     .btn-secondary {
-      background: rgba(255,255,255,0.04);
       color: white;
+      background: rgba(255, 255, 255, 0.045);
     }
 
     .quick-links {
@@ -186,261 +207,278 @@
       gap: 10px;
       align-items: center;
       color: var(--muted);
-      font-size: 0.96rem;
+      font-size: 0.95rem;
     }
 
     .quick-links span {
-      opacity: 0.5;
+      opacity: 0.45;
     }
 
-    .hero-profile-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 24px;
+    .profile-card {
       padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      background: var(--card);
       box-shadow: var(--shadow);
     }
 
-    .hero-profile-image {
+    .profile-card img {
       width: 100%;
-      border-radius: 18px;
+      border-radius: 20px;
       border: 1px solid var(--border);
       margin-bottom: 16px;
       object-fit: cover;
     }
 
-    .hero-profile-card h2 {
+    .profile-card h2 {
       margin: 0 0 10px;
-      font-size: 1.18rem;
+      font-size: 1.13rem;
+      color: white;
     }
 
-    .hero-profile-card ul {
+    .profile-card p {
       margin: 0;
-      padding-left: 18px;
       color: var(--muted);
+      font-size: 0.96rem;
     }
 
     .section {
-      padding: 10px 0 30px;
+      padding: 36px 0;
     }
 
     .section-label {
       margin: 0 0 8px;
       color: var(--accent-2);
-      font-weight: 700;
-      letter-spacing: 0.4px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
       text-transform: uppercase;
-      font-size: 0.88rem;
+      font-size: 0.82rem;
     }
 
     .section h2 {
       margin: 0 0 18px;
-      font-size: 1.95rem;
+      font-size: clamp(1.65rem, 2.8vw, 2.2rem);
+      line-height: 1.2;
+      color: white;
     }
 
     .section-intro {
-      color: var(--muted);
-      max-width: 780px;
       margin-top: -6px;
-      margin-bottom: 22px;
+      margin-bottom: 24px;
+      color: var(--muted);
+      max-width: 820px;
     }
 
-    .card,
-    .info-panel,
-    .contact-card,
-    .pub-box,
-    .testimonial-card,
-    .timeline-item {
-      background: var(--card);
+    .card {
+      padding: 24px;
       border: 1px solid var(--border);
       border-radius: var(--radius);
+      background: var(--card);
       box-shadow: var(--shadow);
     }
 
-    .two-col {
+    .card p {
+      color: var(--muted);
+    }
+
+    .card p:first-child {
+      margin-top: 0;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .summary-grid {
       display: grid;
       grid-template-columns: 1.25fr 0.75fr;
-      gap: 22px;
+      gap: 20px;
       align-items: start;
     }
 
-    .two-col > div:first-child,
-    .info-panel,
-    .contact-card,
-    .pub-box {
-      padding: 24px;
-    }
-
-    .two-col p {
-      color: var(--muted);
-      margin-top: 0;
-    }
-
-    .info-panel {
+    .resume-facts {
       display: grid;
-      gap: 14px;
+      gap: 12px;
     }
 
-    .info-item {
-      padding-bottom: 12px;
-      border-bottom: 1px solid rgba(255,255,255,0.07);
+    .fact {
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--card);
     }
 
-    .info-item:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .info-title {
+    .fact-title {
       display: block;
-      font-weight: 700;
       color: white;
+      font-weight: 800;
       margin-bottom: 4px;
     }
 
-    .cards-grid {
+    .fact span:last-child {
+      color: var(--muted);
+    }
+
+    .skills-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      gap: 16px;
     }
 
-    .cards-grid .card {
+    .skill-card {
       padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--card);
+      box-shadow: var(--shadow);
     }
 
-    .cards-grid h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 1.08rem;
+    .skill-card h3 {
+      margin: 0 0 9px;
+      color: white;
+      font-size: 1.05rem;
     }
 
-    .cards-grid p {
+    .skill-card p {
       margin: 0;
       color: var(--muted);
+      font-size: 0.96rem;
     }
 
     .timeline {
       display: grid;
-      gap: 18px;
+      gap: 16px;
     }
 
     .timeline-item {
       display: grid;
-      grid-template-columns: 165px 1fr;
+      grid-template-columns: 170px 1fr;
       gap: 20px;
-      padding: 22px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--card);
+      box-shadow: var(--shadow);
     }
 
-    .timeline-year {
+    .timeline-date {
       color: var(--accent-2);
-      font-weight: 700;
-      font-size: 0.98rem;
+      font-weight: 900;
       white-space: nowrap;
     }
 
     .timeline-content h3 {
-      margin: 0 0 6px;
-      font-size: 1.1rem;
+      margin: 0 0 4px;
+      color: white;
+      font-size: 1.14rem;
     }
 
     .timeline-org {
-      margin: 0 0 8px;
+      margin: 0 0 12px;
       color: var(--accent);
-      font-weight: 600;
+      font-weight: 800;
     }
 
-    .timeline-content p:last-child {
-      margin-bottom: 0;
-      color: var(--muted);
-    }
-
-    .pub-layout {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 18px;
-    }
-
-    .pub-list,
-    .theme-list,
-    .contact-card ul,
-    .testimonial-card p,
-    .hero-profile-card ul {
-      color: var(--muted);
-    }
-
-    .pub-list,
-    .theme-list,
-    .contact-card ul {
+    .timeline-content ul {
       margin: 0;
       padding-left: 18px;
-    }
-
-    .pub-list li,
-    .theme-list li,
-    .contact-card li,
-    .hero-profile-card li {
-      margin-bottom: 10px;
-    }
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .testimonial-card {
-      padding: 22px;
-    }
-
-    .testimonial-text {
-      margin-top: 0;
-      margin-bottom: 14px;
       color: var(--muted);
-      font-style: italic;
     }
 
-    .testimonial-author {
-      margin: 0;
-      color: white;
-      font-weight: 700;
+    .timeline-content li {
+      margin-bottom: 8px;
     }
 
-    .contact-grid {
+    .timeline-content li:last-child {
+      margin-bottom: 0;
+    }
+
+    .two-col {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 22px;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
       align-items: start;
     }
 
-    .contact-grid > div:first-child {
-      padding: 0;
+    .list-card {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--card);
+      box-shadow: var(--shadow);
     }
 
-    .contact-grid p {
+    .list-card h3 {
+      margin: 0 0 14px;
+      color: white;
+      font-size: 1.12rem;
+    }
+
+    .list-card ul {
+      margin: 0;
+      padding-left: 18px;
       color: var(--muted);
+    }
+
+    .list-card li {
+      margin-bottom: 10px;
+    }
+
+    .list-card li:last-child {
+      margin-bottom: 0;
+    }
+
+    .publication-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .publication-item {
+      padding: 18px 20px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--card);
+    }
+
+    .publication-item strong {
+      color: white;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .publication-item span {
+      color: var(--muted);
+    }
+
+    .contact-box {
+      padding: 28px;
+      border: 1px solid rgba(137, 226, 200, 0.26);
+      border-radius: 26px;
+      background:
+        linear-gradient(135deg, rgba(107, 168, 255, 0.12), rgba(137, 226, 200, 0.09)),
+        var(--card);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      max-width: 850px;
     }
 
     .contact-email {
       display: inline-block;
-      margin-top: 8px;
-      font-size: 1.08rem;
-      font-weight: 700;
-    }
-
-    .contact-card {
-      padding: 24px;
-    }
-
-    .contact-card h3,
-    .pub-box h3 {
-      margin-top: 0;
-      margin-bottom: 12px;
+      margin-top: 4px;
+      color: white;
+      font-weight: 900;
+      font-size: 1.12rem;
     }
 
     .site-footer {
+      margin-top: 34px;
+      padding: 28px 0 42px;
       border-top: 1px solid var(--border);
-      margin-top: 38px;
-      padding: 26px 0 40px;
+      color: var(--muted);
+      font-size: 0.95rem;
     }
 
     .footer-wrap {
@@ -448,24 +486,17 @@
       justify-content: space-between;
       gap: 14px;
       flex-wrap: wrap;
-      color: var(--muted);
-      font-size: 0.95rem;
     }
 
     @media (max-width: 980px) {
       .hero-grid,
-      .two-col,
-      .pub-layout,
-      .contact-grid {
+      .summary-grid,
+      .two-col {
         grid-template-columns: 1fr;
       }
 
-      .cards-grid {
+      .skills-grid {
         grid-template-columns: 1fr 1fr;
-      }
-
-      .testimonials-grid {
-        grid-template-columns: 1fr;
       }
 
       .timeline-item {
@@ -480,17 +511,20 @@
         align-items: flex-start;
       }
 
-      .cards-grid {
+      .nav {
+        gap: 11px;
+      }
+
+      .skills-grid {
         grid-template-columns: 1fr;
       }
 
       .hero-actions {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
       }
 
       .btn {
-        width: 100%;
         text-align: center;
       }
 
@@ -504,16 +538,19 @@
     }
   </style>
 </head>
+
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a href="#top" class="brand">Morteza Maali Amiri</a>
+      <a href="#top" class="brand">Morteza Maali Amiri, Ph.D.</a>
+
       <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#expertise">Expertise</a>
+        <a href="#summary">Summary</a>
+        <a href="#consulting">Consulting</a>
         <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
         <a href="#publications">Publications</a>
-        <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -523,20 +560,33 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <p class="hero-name">Morteza Maali Amiri, Ph.D.</p>
-          <p class="hero-role">Color & Imaging Scientist</p>
-          <p class="eyebrow">Camera ISP • Color & Imaging Science • AI/ML for Imaging • HDR • Hyperspectral / Multispectral Imaging</p>
-          <h1>Consulting in camera ISP, color and imaging science, AI/ML for imaging, and hyperspectral / multispectral imaging</h1>
-          <p class="hero-text">
-            I am Morteza Maali Amiri, Ph.D., a color and imaging scientist with experience across both industry and academia.
-            My work spans camera ISP, color reproduction, HDR imaging, image and video quality evaluation, skin tone reproduction,
-            hyperspectral and multispectral imaging, computer vision, machine learning, deep learning, psychophysical studies,
-            AR/VR/MR imaging, and custom imaging tools.
+          <span class="eyebrow">Color Science • Imaging Science • Camera ISP • Spectral Imaging</span>
+
+          <h1>Morteza Maali Amiri, Ph.D.</h1>
+
+          <p class="hero-title">
+            Color & Imaging Scientist
           </p>
 
+          <p class="hero-text">
+            I am a Color and Imaging Scientist with a Ph.D. in Imaging Science and experience across
+            consumer imaging, autonomous vehicle imaging, cultural heritage imaging, AR/VR/MR imaging,
+            camera image quality, color reproduction, HDR imaging, and hyperspectral / multispectral imaging.
+          </p>
+
+          <div class="callout">
+            <p>
+              <strong>Need help with hyper/multispectral imaging, color science, imaging science,
+              camera ISP, or color reproduction?</strong>
+              Feel free to reach out for consulting, technical review, project-based support,
+              imaging workflow development, or custom Python / MATLAB imaging tools.
+            </p>
+          </div>
+
           <div class="hero-actions">
-            <a class="btn btn-primary" href="mailto:mm2391@rit.edu">Email for consulting inquiries</a>
-            <a class="btn btn-secondary" href="#contact">View consulting areas</a>
+            <a class="btn btn-primary" href="mailto:mm2391@rit.edu">Contact Me</a>
+            <a class="btn btn-secondary" href="#experience">View CV</a>
+            <a class="btn btn-secondary" href="#consulting">Consulting Areas</a>
           </div>
 
           <div class="quick-links">
@@ -552,108 +602,136 @@
           </div>
         </div>
 
-        <div class="hero-profile-card">
+        <aside class="profile-card">
           <img
             src="images/morteza-profile.jpeg"
             alt="Morteza Maali Amiri"
-            class="hero-profile-image"
           />
-          <h2>Available for</h2>
-          <ul>
-            <li>Camera ISP and imaging pipeline consulting</li>
-            <li>Color science, HDR, and image quality evaluation</li>
-            <li>AI / machine learning for imaging applications</li>
-            <li>Skin tone, perceptual, and AR/VR/MR imaging studies</li>
-            <li>Hyperspectral / multispectral imaging and custom tool development</li>
-          </ul>
-        </div>
+
+          <h2>Professional Focus</h2>
+
+          <p>
+            Camera ISP, color perception and reproduction, HDR imaging, image/video quality,
+            AR/VR/MR imaging, skin tone reproduction, psychophysics, hyperspectral and multispectral
+            imaging, computer vision, and AI/ML for imaging.
+          </p>
+        </aside>
       </div>
     </section>
 
-    <section class="section" id="about">
-      <div class="container two-col">
+    <section class="section" id="summary">
+      <div class="container summary-grid">
         <div class="card">
-          <p class="section-label">About</p>
-          <h2>Small bio</h2>
+          <p class="section-label">Professional Summary</p>
+
+          <h2>Color & Imaging Scientist with industry and academic experience</h2>
+
           <p>
-            Morteza Maali Amiri is a color and imaging scientist with advanced training in Imaging Science
-            and Color Science from Rochester Institute of Technology. His work has addressed problems in
-            color reproduction, camera and imaging workflows, HDR imaging, spectral and colorimetric recovery,
-            image registration, hyperspectral and multispectral imaging, computer vision, and machine learning
-            for specialized imaging applications.
+            My work focuses on color and imaging science, including color perception and reproduction,
+            image quality analysis, HDR imaging, hyper/multispectral imaging, image processing,
+            computer vision, psychophysics, AR/VR/MR imaging, and imaging workflow automation.
           </p>
+
           <p>
-            He currently works as a Color / Imaging Scientist through DigitalFish on contract with Meta,
-            contributing to projects involving color perception and reproduction, camera and display-related evaluation,
-            image and video quality, AR/VR/MR perception, skin tone reproduction, psychophysical experiments,
-            and automated capture workflows.
+            I have worked on imaging problems across consumer imaging, autonomous vehicle imaging,
+            cultural heritage imaging, and advanced imaging research. My technical work combines
+            scientific imaging knowledge with practical software development in Python, MATLAB,
+            machine learning frameworks, ADB-connected device workflows, and image/video processing tools.
           </p>
-          <p style="margin-bottom:0;">
-            In addition to his scientific and engineering work, he also provides consulting for companies,
-            researchers, and specialized teams that need support with camera ISP, imaging analysis,
-            perceptual evaluation, spectral imaging, AI / machine learning for imaging, and custom technical
-            development in Python and MATLAB.
+
+          <p>
+            I also provide consulting and project-based technical support for teams working on camera ISP,
+            color science, color reproduction, image quality, spectral imaging, and custom imaging workflows.
           </p>
         </div>
 
-        <div class="info-panel">
-          <div class="info-item">
-            <span class="info-title">Current role</span>
+        <div class="resume-facts">
+          <div class="fact">
+            <span class="fact-title">Current Role</span>
             <span>Color / Imaging Scientist</span>
           </div>
-          <div class="info-item">
-            <span class="info-title">Background</span>
+
+          <div class="fact">
+            <span class="fact-title">Education</span>
             <span>Ph.D. in Imaging Science, M.Sc. in Color Science</span>
           </div>
-          <div class="info-item">
-            <span class="info-title">Main tools</span>
-            <span>Python, MATLAB, PyTorch, TensorFlow, ADB, FFmpeg</span>
+
+          <div class="fact">
+            <span class="fact-title">Core Tools</span>
+            <span>Python, MATLAB, PyTorch, TensorFlow, ADB, FFmpeg, Linux command line</span>
           </div>
-          <div class="info-item">
-            <span class="info-title">Methods</span>
-            <span>Machine learning, deep learning, computer vision, psychophysics</span>
+
+          <div class="fact">
+            <span class="fact-title">Research Areas</span>
+            <span>Color reproduction, spectral imaging, image quality, computer vision, psychophysics</span>
           </div>
-          <div class="info-item">
-            <span class="info-title">Languages</span>
+
+          <div class="fact">
+            <span class="fact-title">Languages</span>
             <span>English, Persian</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="expertise">
+    <section class="section" id="consulting">
       <div class="container">
-        <p class="section-label">Expertise</p>
-        <h2>Core areas</h2>
-        <div class="cards-grid">
-          <article class="card">
+        <p class="section-label">Consulting & Collaboration</p>
+
+        <h2>Technical areas where I can help</h2>
+
+        <p class="section-intro">
+          I am available for consulting, technical review, project-based collaboration, algorithm development,
+          imaging workflow design, and custom Python / MATLAB tool development.
+        </p>
+
+        <div class="skills-grid">
+          <article class="skill-card">
             <h3>Camera ISP & Imaging Pipelines</h3>
-            <p>Consulting and technical support for camera ISP, imaging pipeline evaluation, workflow design, and practical imaging system analysis.</p>
+            <p>
+              Camera pipeline analysis, white balance, color correction, tone mapping, image quality evaluation,
+              and practical debugging of imaging workflows.
+            </p>
           </article>
 
-          <article class="card">
+          <article class="skill-card">
             <h3>Color Science</h3>
-            <p>Color reproduction, color appearance, camera and display characterization, perceptual analysis, and human color vision.</p>
+            <p>
+              Color reproduction, color perception, colorimetric analysis, camera/display characterization,
+              skin tone reproduction, and color appearance considerations.
+            </p>
           </article>
 
-          <article class="card">
+          <article class="skill-card">
+            <h3>Imaging Science</h3>
+            <p>
+              Image formation, radiometry, optics-related imaging analysis, image registration, workflow design,
+              and scientific imaging evaluation.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <h3>Hyper/Multispectral Imaging</h3>
+            <p>
+              Spectral imaging workflows, reflectance recovery, spectral/colorimetric characterization,
+              visualization, registration, and analysis tools.
+            </p>
+          </article>
+
+          <article class="skill-card">
             <h3>HDR & Image Quality</h3>
-            <p>HDR imaging, image and video quality evaluation, perceptual assessment, and vision-focused workflow analysis.</p>
+            <p>
+              HDR imaging, image/video quality assessment, perceptual evaluation, and objective/subjective
+              image quality workflows.
+            </p>
           </article>
 
-          <article class="card">
-            <h3>AI / Machine Learning for Imaging</h3>
-            <p>Machine learning, deep learning, computer vision, and applied AI workflows for imaging analysis, evaluation, and tool development.</p>
-          </article>
-
-          <article class="card">
-            <h3>Skin Tone, Perception & AR/VR/MR</h3>
-            <p>Skin tone reproduction, psychophysical experiments, perceptual evaluation, and imaging studies related to human appearance, display experience, and AR/VR/MR systems.</p>
-          </article>
-
-          <article class="card">
-            <h3>Hyperspectral & Multispectral Imaging</h3>
-            <p>Hyperspectral and multispectral imaging, spectral reflectance recovery, colorimetric characterization, and scientific imaging workflows.</p>
+          <article class="skill-card">
+            <h3>AI / ML for Imaging</h3>
+            <p>
+              Applied machine learning, deep learning, computer vision, preprocessing pipelines,
+              and imaging-focused model evaluation.
+            </p>
           </article>
         </div>
       </div>
@@ -662,54 +740,204 @@
     <section class="section" id="experience">
       <div class="container">
         <p class="section-label">Experience</p>
-        <h2>Selected professional appointments</h2>
+
+        <h2>Professional Experience</h2>
+
         <div class="timeline">
           <article class="timeline-item">
-            <div class="timeline-year">2024 – Present</div>
+            <div class="timeline-date">2024 – Present</div>
+
             <div class="timeline-content">
               <h3>Color / Imaging Scientist</h3>
-              <p class="timeline-org">DigitalFish, on contract with Meta</p>
-              <p>
-                Working on color perception and reproduction across Meta products, HDR imaging, image and video quality analysis,
-                AR/VR/MR perception, skin tone reproduction, psychophysical experiments on Android-based devices, and automated
-                capture workflows using Python, scripting, and ADB-connected systems.
-              </p>
+              <p class="timeline-org">Meta, contract via DigitalFish — California, USA</p>
+
+              <ul>
+                <li>Work on color and imaging science projects across Meta products, including color perception and color reproduction.</li>
+                <li>Develop and evaluate advanced white balancing methods for imaging applications.</li>
+                <li>Contribute to HDR imaging, image/video quality analysis, AR/VR/MR color perception, and skin tone color reproduction workflows.</li>
+                <li>Set up psychophysical perception experiments on Android-based devices.</li>
+                <li>Automate data capture workflows on Android / ADB-connected devices using Python, scripting, and device-control tooling.</li>
+                <li>Develop and maintain production features in a large-scale shared codebase following peer-reviewed engineering workflows and best practices.</li>
+                <li>Develop Python-based preprocessing pipelines for multi-device video experiments, including synchronization and temporal trimming using FFmpeg.</li>
+              </ul>
             </div>
           </article>
 
           <article class="timeline-item">
-            <div class="timeline-year">2023 – 2024</div>
+            <div class="timeline-date">2023 – 2024</div>
+
             <div class="timeline-content">
               <h3>Postdoctoral Researcher in Imaging Science</h3>
-              <p class="timeline-org">Rochester Institute of Technology</p>
-              <p>
-                Worked on affordable multispectral imaging systems, colorimetric characterization, 3D class-map workflows for
-                polychrome sculptures, and image registration for cultural heritage and scientific imaging applications.
-              </p>
+              <p class="timeline-org">Rochester Institute of Technology — Rochester, NY</p>
+
+              <ul>
+                <li>Worked on hyper/multispectral imaging systems, including building simple and affordable imaging setups.</li>
+                <li>Developed workflows for constructing 3D class maps of polychrome sculptures.</li>
+                <li>Performed colorimetric characterization of multispectral cameras and related imaging pipelines.</li>
+                <li>Worked on image registration and cultural heritage imaging applications.</li>
+              </ul>
             </div>
           </article>
 
           <article class="timeline-item">
-            <div class="timeline-year">2021</div>
+            <div class="timeline-date">2021</div>
+
             <div class="timeline-content">
               <h3>Software Intern</h3>
-              <p class="timeline-org">NVIDIA</p>
-              <p>
-                Worked on autonomous-vehicle camera topics including image quality analysis, image processing,
-                machine learning, deep learning, and color reproduction.
-              </p>
+              <p class="timeline-org">NVIDIA — California, USA</p>
+
+              <ul>
+                <li>Worked with the camera team on autonomous vehicle imaging and color science problems.</li>
+                <li>Contributed to image quality analysis, image processing, machine learning, deep learning, and color reproduction tasks.</li>
+              </ul>
             </div>
           </article>
 
           <article class="timeline-item">
-            <div class="timeline-year">2019</div>
+            <div class="timeline-date">2019</div>
+
             <div class="timeline-content">
               <h3>Software Intern</h3>
-              <p class="timeline-org">NVIDIA</p>
-              <p>
-                Worked on image quality analysis, noise quantification, image processing, machine learning,
-                and color reproduction for automotive camera projects.
-              </p>
+              <p class="timeline-org">NVIDIA — California, USA</p>
+
+              <ul>
+                <li>Worked with the camera team on autonomous vehicle imaging and color science problems.</li>
+                <li>Contributed to image quality analysis, noise quantification, image processing, machine learning, and color reproduction tasks.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <p class="section-label">Technical Skills</p>
+
+        <h2>Skills and Methods</h2>
+
+        <div class="two-col">
+          <div class="list-card">
+            <h3>Programming & Tools</h3>
+            <ul>
+              <li>Python</li>
+              <li>MATLAB</li>
+              <li>TensorFlow</li>
+              <li>PyTorch</li>
+              <li>Android Debug Bridge — ADB</li>
+              <li>Linux command line</li>
+              <li>Scripting automation</li>
+              <li>PsychoPy</li>
+              <li>FFmpeg</li>
+              <li>Pascal</li>
+            </ul>
+          </div>
+
+          <div class="list-card">
+            <h3>Color / Imaging Science</h3>
+            <ul>
+              <li>Color perception and reproduction</li>
+              <li>Image quality analysis</li>
+              <li>HDR imaging</li>
+              <li>Hyper/multispectral imaging</li>
+              <li>Image processing</li>
+              <li>Computer vision</li>
+              <li>Image registration</li>
+              <li>Cultural heritage imaging</li>
+              <li>Optics for imaging science</li>
+              <li>Radiometry</li>
+            </ul>
+          </div>
+
+          <div class="list-card">
+            <h3>Methods</h3>
+            <ul>
+              <li>Machine learning</li>
+              <li>Deep learning</li>
+              <li>PCA</li>
+              <li>NNMF</li>
+              <li>SVD</li>
+              <li>Regression</li>
+              <li>Interpolation</li>
+              <li>Fourier methods in imaging</li>
+              <li>Psychophysics</li>
+            </ul>
+          </div>
+
+          <div class="list-card">
+            <h3>Typical Project Support</h3>
+            <ul>
+              <li>Camera ISP and image pipeline review</li>
+              <li>Color reproduction and colorimetric evaluation</li>
+              <li>Image quality experiments and analysis</li>
+              <li>Hyper/multispectral imaging workflow design</li>
+              <li>Custom Python / MATLAB imaging tools</li>
+              <li>Scientific visualization and reporting</li>
+              <li>AI/ML imaging preprocessing and evaluation pipelines</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="container">
+        <p class="section-label">Education</p>
+
+        <h2>Academic Background</h2>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-date">2017 – 2023</div>
+
+            <div class="timeline-content">
+              <h3>Ph.D. in Imaging Science</h3>
+              <p class="timeline-org">Rochester Institute of Technology — Rochester, NY</p>
+
+              <ul>
+                <li>Chester F. Carlson Center for Imaging Science</li>
+                <li>Thesis: Virtual Cleaning of Works of Art Using Deep Learning Based Approaches</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-date">2015 – 2017</div>
+
+            <div class="timeline-content">
+              <h3>M.Sc. in Color Science</h3>
+              <p class="timeline-org">Rochester Institute of Technology — Rochester, NY</p>
+
+              <ul>
+                <li>Munsell Color Science Laboratory</li>
+                <li>Thesis: Novel Approaches to the Spectral and Colorimetric Color Reproduction</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-date">2012 – 2015</div>
+
+            <div class="timeline-content">
+              <h3>M.Sc. in Textile Chemistry and Fiber Science</h3>
+              <p class="timeline-org">Tehran Polytechnic — Tehran, Iran</p>
+
+              <ul>
+                <li>Thesis: Heuristic Methods in Spectral Data Recovery</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-date">2008 – 2012</div>
+
+            <div class="timeline-content">
+              <h3>B.Sc. in Textile Chemistry and Fiber Science</h3>
+              <p class="timeline-org">Tehran Polytechnic — Tehran, Iran</p>
+
+              <ul>
+                <li>Thesis: In-Situ Synthesis of Nano ZnO on Wool</li>
+              </ul>
             </div>
           </article>
         </div>
@@ -718,100 +946,108 @@
 
     <section class="section" id="publications">
       <div class="container">
-        <p class="section-label">Research</p>
-        <h2>Selected publications and themes</h2>
-        <div class="pub-layout">
-          <div class="pub-box">
-            <h3>Selected publications</h3>
-            <ul class="pub-list">
-              <li>The Development of a Skin Chart Based on Real Measured Data (2026)</li>
-              <li>A New Method for XRF and RGB Image Registration (2025)</li>
-              <li>Colorimetric Characterization of Multispectral Imaging Systems for Visualization of Historical Artifacts (2024)</li>
-              <li>Virtual Cleaning of Works of Art Using a Deep Generative Network: Spectral Reflectance Estimation (2023)</li>
-              <li>Virtual Cleaning of Works of Art Using Deep Convolutional Neural Networks (2021)</li>
-              <li>Spectral Reflectance Reconstruction Using Fuzzy Logic System Training: Color Science Application (2020)</li>
-              <li>A Strategy Toward Spectral and Colorimetric Color Reproduction Using Ordinary Digital Cameras (2018)</li>
-            </ul>
+        <p class="section-label">Selected Publications</p>
+
+        <h2>Research Publications</h2>
+
+        <div class="publication-list">
+          <div class="publication-item">
+            <strong>The Development of a Skin Chart Based on Real Measured Data</strong>
+            <span>Color Research & Application, 2026</span>
           </div>
 
-          <div class="pub-box">
-            <h3>Research themes</h3>
-            <ul class="theme-list">
-              <li>Camera and imaging workflow analysis</li>
-              <li>Color reproduction and spectral recovery</li>
-              <li>Hyperspectral and multispectral imaging</li>
-              <li>Image quality and perceptual evaluation</li>
-              <li>Machine learning and deep learning for imaging</li>
-            </ul>
+          <div class="publication-item">
+            <strong>A New Method for XRF and RGB Image Registration</strong>
+            <span>npj Heritage Science, 2025</span>
+          </div>
+
+          <div class="publication-item">
+            <strong>Colorimetric Characterization of Multispectral Imaging Systems for Visualization of Historical Artifacts</strong>
+            <span>Journal of Cultural Heritage, 2024</span>
+          </div>
+
+          <div class="publication-item">
+            <strong>Virtual Cleaning of Works of Art Using a Deep Generative Network: Spectral Reflectance Estimation</strong>
+            <span>Heritage Science, 2023</span>
+          </div>
+
+          <div class="publication-item">
+            <strong>Virtual Cleaning of Works of Art Using Deep Convolutional Neural Networks</strong>
+            <span>Heritage Science, 2021</span>
+          </div>
+
+          <div class="publication-item">
+            <strong>Spectral Reflectance Reconstruction Using Fuzzy Logic System Training: Color Science Application</strong>
+            <span>Sensors, 2020</span>
+          </div>
+
+          <div class="publication-item">
+            <strong>A Strategy Toward Spectral and Colorimetric Color Reproduction Using Ordinary Digital Cameras</strong>
+            <span>Color Research & Application, 2018</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="testimonials">
+    <section class="section" id="awards">
       <div class="container">
-        <p class="section-label">Testimonials</p>
-        <h2>Selected feedback and recommendations</h2>
-        <p class="section-intro">
-          I welcome feedback from collaborators, clients, and colleagues. Submitted testimonials are reviewed
-          before being added here.
-        </p>
+        <p class="section-label">Awards & Contributions</p>
 
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdTqw0C3XQ4y-KZhKwPGSCiC0MF_xBdSjM4EA89y9qY4b9ZOQ/viewform?usp=publish-editor" target="_blank" rel="noreferrer">Leave a testimonial</a>
-          <a class="btn btn-secondary" href="mailto:mm2391@rit.edu?subject=Testimonial%20for%20Morteza%20Maali%20Amiri">Send by email</a>
-        </div>
+        <h2>Recognition</h2>
 
-        <div class="testimonials-grid">
-          <article class="testimonial-card">
-            <p class="testimonial-text">
-              “Morteza was able to help me with the hyperspectral imaging problem that I had. He is very good at what he is doing.”
-            </p>
-            <p class="testimonial-author">— Mark Stephens</p>
-          </article>
+        <div class="two-col">
+          <div class="list-card">
+            <h3>Awards</h3>
 
-          <article class="testimonial-card">
-            <p class="testimonial-text">
-              “He is very competent in coding.”
-            </p>
-            <p class="testimonial-author">— Mojtaba, Professor / Federal University of Rio de Janeiro</p>
-          </article>
+            <ul>
+              <li>Granted National Interest to the United States — 2020</li>
+              <li>Full Scholarship for Ph.D., Chester F. Carlson Center for Imaging Science — 2017</li>
+              <li>Full Scholarship for M.Sc., Munsell Color Science Laboratory — 2015</li>
+              <li>Best B.Sc. Thesis, Department of Textile Engineering, Tehran Polytechnic — 2013</li>
+              <li>Top 1% Student Entering University in Iran — 2008</li>
+            </ul>
+          </div>
 
-          <article class="testimonial-card">
-            <p class="testimonial-text">
-              “Example testimonial can go here until you add a new one.”
-            </p>
-            <p class="testimonial-author">— Name, Collaborator</p>
-          </article>
+          <div class="list-card">
+            <h3>Professional Contributions</h3>
+
+            <ul>
+              <li>Ad-hoc reviewer for scientific journals including Photochemistry and Photobiology</li>
+              <li>Ad-hoc reviewer for Color Research & Application</li>
+              <li>Ad-hoc reviewer for Heritage Science</li>
+              <li>Science communication and educational content through YouTube</li>
+              <li>Portfolio and open technical projects shared through GitHub</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section" id="contact">
-      <div class="container contact-grid">
-        <div>
+      <div class="container">
+        <div class="contact-box">
           <p class="section-label">Contact</p>
-          <h2>Inquiries and consultations</h2>
-          <p>
-            If your team is working on camera ISP, color science, image quality, HDR imaging,
-            hyperspectral or multispectral imaging, AI / machine learning for imaging, AR/VR/MR imaging,
-            perceptual evaluation, or custom imaging tools, feel free to reach out. I am available for consulting,
-            technical review, project-based collaborations, and specialized development work.
-          </p>
-          <a class="contact-email" href="mailto:mm2391@rit.edu">mm2391@rit.edu</a>
-        </div>
 
-        <div class="contact-card">
-          <h3>Typical consultation topics</h3>
-          <ul>
-            <li>Camera ISP and imaging pipeline evaluation</li>
-            <li>Color science and color reproduction analysis</li>
-            <li>HDR and image/video quality workflows</li>
-            <li>AI / machine learning for imaging applications</li>
-            <li>Skin tone, perceptual, and AR/VR/MR imaging studies</li>
-            <li>Hyperspectral / multispectral imaging</li>
-            <li>Custom Python and MATLAB imaging tools</li>
-          </ul>
+          <h2>Let’s talk about your imaging project</h2>
+
+          <p>
+            If you need help with hyper/multispectral imaging, color science, imaging science,
+            camera ISP, color reproduction, HDR imaging, image quality evaluation, AI/ML for imaging,
+            or custom Python / MATLAB imaging tools, feel free to contact me.
+          </p>
+
+          <p>
+            I am open to consulting, project-based technical support, scientific review, algorithm development,
+            imaging workflow design, and collaboration with companies, research teams, and specialized imaging groups.
+          </p>
+
+          <a class="contact-email" href="mailto:mm2391@rit.edu">mm2391@rit.edu</a>
+
+          <div class="hero-actions" style="margin-top: 22px; margin-bottom: 0;">
+            <a class="btn btn-primary" href="mailto:mm2391@rit.edu?subject=Consulting%20Inquiry%20-%20Imaging%20Science">Email for Consulting</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/morteza-maali-amiri-4768a48b/" target="_blank" rel="noreferrer">Connect on LinkedIn</a>
+            <a class="btn btn-secondary" href="https://www.youtube.com/@Morteza_Sc" target="_blank" rel="noreferrer">View YouTube</a>
+          </div>
         </div>
       </div>
     </section>
@@ -819,8 +1055,8 @@
 
   <footer class="site-footer">
     <div class="container footer-wrap">
-      <p>© <span id="year"></span> Morteza Maali Amiri</p>
-      <p>Built as a simple static website for GitHub Pages.</p>
+      <p>© <span id="year"></span> Morteza Maali Amiri, Ph.D.</p>
+      <p>Color & Imaging Scientist | Camera ISP | Color Science | Hyper/Multispectral Imaging</p>
     </div>
   </footer>
 
